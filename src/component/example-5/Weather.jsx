@@ -5,7 +5,7 @@ const Weather = () => {
 const[weather,setWeather] = useState("")
 
  const WeatherHandler = async () =>{
-       const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=ae538ed072ef2c0480f7c5c976f45871&units=metric`)
+       const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid={API Key}&units=metric`)
        const jsonData = await res.json();
        setWeather(jsonData)
       }
